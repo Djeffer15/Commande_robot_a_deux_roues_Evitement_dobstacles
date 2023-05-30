@@ -1,33 +1,24 @@
-# Commande_robot_a_deux_roues_Evitement_dobstacles
-Chapitre 8 Cours Informatique de Commande
 
-**L3 SPI IEE        ![](Aspose.Words.dfa6ff50-d6db-46a4-a790-cfd38f4fffc2.001.png)![](Aspose.Words.dfa6ff50-d6db-46a4-a790-cfd38f4fffc2.002.png)![](Aspose.Words.dfa6ff50-d6db-46a4-a790-cfd38f4fffc2.003.png)Microcontrôleurs TP série 5![](Aspose.Words.dfa6ff50-d6db-46a4-a790-cfd38f4fffc2.004.png)**
+# Commande d’un robot à deux roues![](Aspose.Words.dfa6ff50-d6db-46a4-a790-cfd38f4fffc2.005.jpeg)
 
-![](Aspose.Words.dfa6ff50-d6db-46a4-a790-cfd38f4fffc2.005.jpeg)
 
-Commande d’un robot à deux roues
+# Évitement d’obstacles
 
-Évitement d’obstacles![](Aspose.Words.dfa6ff50-d6db-46a4-a790-cfd38f4fffc2.006.png)
-
-Jacques RAHARIJAONA (RA-RI-JOHN)
-
-Capteur US HC-SR04![](Aspose.Words.dfa6ff50-d6db-46a4-a790-cfd38f4fffc2.007.png)
+## Capteur US HC-SR04![](Aspose.Words.dfa6ff50-d6db-46a4-a790-cfd38f4fffc2.007.png)
 
 ![](Aspose.Words.dfa6ff50-d6db-46a4-a790-cfd38f4fffc2.008.jpeg)
 
-|Trigger – pin13 ECHO – pin14||
-| -: | :- |
-|||
+*Trigger – pin13 ECHO – pin14*
 
-**Evitement d’obstacles![](Aspose.Words.dfa6ff50-d6db-46a4-a790-cfd38f4fffc2.009.png)**
+**Evitement d’obstacles**
 
-Nous expérimenterons l’évitement d’obstacles sur le robot à deux roues du TP série 2. Ce mobile sans pilote à bord peut être équipé du capteur à ultrasons HC-SR04 pour effectuer des mesures de distances.
+Nous expérimenterons l’évitement d’obstacles sur le robot à deux roues. Ce mobile sans pilote à bord peut être équipé du capteur à ultrasons HC-SR04 pour effectuer des mesures de distances.
 
 ![](Aspose.Words.dfa6ff50-d6db-46a4-a790-cfd38f4fffc2.010.png)
 
 Le capteur est constitué d'un émetteur et d'un récepteur d'ultrasons. La distance parcourue par les ondes ultrasonores est proportionnelle à la durée du parcours. C’est sur ce principe qu’est basé le fonctionnement du capteur.
 
-**Mesure de distance avec le HC-SR04![](Aspose.Words.dfa6ff50-d6db-46a4-a790-cfd38f4fffc2.009.png)**
+**Mesure de distance avec le HC-SR04**
 
 Les liaisons avec le microcontrôleur sont effectuées à l’aide deux broches physiques : l’entrée de commande **Trigger** et la sortie du signal de retour (**Echo**).
 
@@ -39,32 +30,26 @@ Le principe de la mesure de distance est le suivant :
 
 **d = duree\_ECHO \* Cair / 2**
 
-**L3 IMASI – A**ht**dS**tp**T**s:**P**/** /**S**univ**érie** -leha**1 –**vre.f**Ren**r**trée 2021**
-
 **La méthode d’évitement simple**
 
 Pour notre application, les liaisons avec la carte micro:bit sont les suivantes :
 
 - le signal de commande arrivant sur l’entrée ***Trigger*** est généré par***pin13***,
-- le signal de sortie***ECHO*** est lu sur***pin14***.
-- les moteurs du robot sont commandés respectivement par [***pin8*** (sens)/***pin1*** (vitesse)] et [***pin12*** (sens)/***pin2*** (vitesse)].
+- le signal de sortie ***ECHO*** est lu sur ***pin14***.
+- les moteurs du robot sont commandés respectivement par [*pin8* (sens)/*pin1* (vitesse)] et [*pin12* (sens)/*pin2* (vitesse)].
 
 La tâche d’évitement d’obstacle est une boucle infinie qui doit obéir aux contraintes suivantes :
 
 - Le robot doit avancer lorsque la distance mesurée est supérieure à 20cm,
 - Dans le cas contraire, il doit amorcer un pivotement vers la gauche.
 
-Ilest à remarquer que dans cet algorithme relativement simple le robot se remettra naturellement à avancer lorsqu’une « fenêtre libre (aucun obstacle à moins de 20cm) »est observée.
+Il est à remarquer que dans cet algorithme relativement simple le robot se remettra naturellement à avancer lorsqu’une « fenêtre libre (aucun obstacle à moins de 20cm) »est observée.
 
-
-**Le TP**
-
-**Travail demandé**
 
 Écrire un programme d’évitement d’obstacles basé sur la méthode simple présentée ci-dessus. Il sera nécessaire de créer des fonctions de gestion des mouvements élémen- taires du robot comme :
 
 - ***robotAvance(***vitesse***)***,
-- ***robotPivote(***vitesse**,** sens***)***,
+- ***robotPivote(***vitesse**,** sens**),
 - ***robotStoppe()***.
 
 **Comment procéder**
@@ -83,7 +68,3 @@ NB : la fonction ***time\_pulse\_us()*** est interdite parce qu’il vous est de
 <a name="_page7_x0.00_y0.00"></a>[**Brochage de la carte micro:bit**](https://microbit.org/guide/python/)![](Aspose.Words.dfa6ff50-d6db-46a4-a790-cfd38f4fffc2.012.png)
 
 ![](Aspose.Words.dfa6ff50-d6db-46a4-a790-cfd38f4fffc2.013.png)
-
-**20/03/2023 20:14** http://www.univ-lehavre.fr **8![](Aspose.Words.dfa6ff50-d6db-46a4-a790-cfd38f4fffc2.014.jpeg)![](Aspose.Words.dfa6ff50-d6db-46a4-a790-cfd38f4fffc2.015.jpeg)**
-
-https://microbit.org/fr/guide/features/
