@@ -4,7 +4,7 @@
 
 # Évitement d’obstacles
 
-## Capteur US HC-SR04![](Aspose.Words.dfa6ff50-d6db-46a4-a790-cfd38f4fffc2.007.png)
+**Capteur US HC-SR04**![](Aspose.Words.dfa6ff50-d6db-46a4-a790-cfd38f4fffc2.007.png)
 
 ![](Aspose.Words.dfa6ff50-d6db-46a4-a790-cfd38f4fffc2.008.jpeg)
 
